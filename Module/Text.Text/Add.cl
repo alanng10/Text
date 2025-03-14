@@ -156,6 +156,11 @@ class Add : Any
         return this.TextInfra.Same(text, other, this.TLess);
     }
 
+    maide prusate Bool StringLess(var String lite, var String rite)
+    {
+        return this.StringLess.Execute(lite, rite);
+    }
+
     maide prusate Int StringCount(var String k)
     {
         return this.StringComp.Count(k);
