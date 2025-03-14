@@ -143,14 +143,29 @@ class Add : Any
         return this.StringComp.Count(k);
     }
 
-    maide prusate String StringInt(var Int int)
+    maide prusate String StringBool(var Bool value)
     {
-        return this.StringIntFormat(int, 10, false, 0, null, 0);
+        var String a;
+        
+        inf (value)
+        {
+            a : this.TextInfra.TrueString;
+        }
+        inf (~value)
+        {
+            a : this.TextInfra.FalseString;
+        }
+        return a;
     }
 
-    maide prusate String StringIntHex(var Int int)
+    maide prusate String StringInt(var Int value)
     {
-        return this.StringIntFormat(int, 16, false, 15, 15, this.Char("0"));
+        return this.StringIntFormat(value, 10, false, 0, null, 0);
+    }
+
+    maide prusate String StringIntHex(var Int value)
+    {
+        return this.StringIntFormat(value, 16, false, 15, 15, this.Char("0"));
     }
 
     maide prusate String StringBoolFormat(var Bool bool, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
