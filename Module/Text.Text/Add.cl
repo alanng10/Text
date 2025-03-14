@@ -169,7 +169,7 @@ class Add : Any
     maide prusate String StringBool(var Bool value)
     {
         var String a;
-        
+
         inf (value)
         {
             a : this.TextInfra.TrueString;
