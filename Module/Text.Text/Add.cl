@@ -280,6 +280,6 @@ class Add : Any
 
     maide prusate Add AddLine()
     {
-        return this.Add("\n");
+        return this.Add(this.TextInfra.NewLine);
     }
 }
