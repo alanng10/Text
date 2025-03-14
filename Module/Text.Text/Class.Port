@@ -1,0 +1,31 @@
+[Module]
+Text.Text:0.00.00
+
+[Import]
+System.Infra
+    Any Any
+    Bool Bool
+    Int Int
+    String String
+    Range Range
+    IntLess IntLess
+System.Text
+    Text Text
+    TextForm Form
+    TextLess Less
+    Format Format
+    FormatArg FormatArg
+    IntParse IntParse
+    StringComp StringComp
+    StringAdd StringAdd
+    StringData StringData
+    StringLess StringLess
+    TextInfra Infra
+
+[Export]
+Add
+Create
+
+[Storage]
+
+[Entry]
