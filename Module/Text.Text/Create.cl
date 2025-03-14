@@ -7,4 +7,13 @@ class Create : Any
         a.Init();
         return a;
     }
+
+    maide prusate Add Text()
+    {
+        var Add a;
+        a : new Add;
+        a.Text : true;
+        a.Init();
+        return a;
+    }
 }
