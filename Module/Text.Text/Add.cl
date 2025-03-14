@@ -14,16 +14,12 @@ class Add : Any
         this.CharLess : this.CreateCharLess();
         this.TForm : this.CreateTextForm();
         this.StringLess : this.CreateStringLess();
+        this.TLess : this.CreateTextLess();
 
-        inf (this.Text)
-        {
-            this.TLess : this.CreateTextLess();
-
-            this.TextA : this.CreateText();
-            this.TextB : this.CreateText();
-            this.StringDataA : this.CreateStringData();
-            this.StringDataB : this.CreateStringData();
-        }
+        this.TextA : this.CreateText();
+        this.TextB : this.CreateText();
+        this.StringDataA : this.CreateStringData();
+        this.StringDataB : this.CreateStringData();
         return true;
     }
 
@@ -115,7 +111,6 @@ class Add : Any
         return a;
     }
 
-    field prusate Bool Text { get { return data; } set { data : value; } }
     field precate TextInfra TextInfra { get { return data; } set { data : value; } }
     field precate StringComp StringComp { get { return data; } set { data : value; } }
     field precate Format Format { get { return data; } set { data : value; } }
