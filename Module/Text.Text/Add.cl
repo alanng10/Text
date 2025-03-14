@@ -246,7 +246,7 @@ class Add : Any
         return this.TextInfra.TextCreateStringData(k, null);
     }
 
-    maide prusate DeA AddClear()
+    maide prusate Add AddClear()
     {
         this.StringAdd.Clear();
         return this;
@@ -257,13 +257,13 @@ class Add : Any
         return this.StringAdd.Result();
     }
 
-    maide prusate DeA Add(var String k)
+    maide prusate Add Add(var String k)
     {
         this.TextInfra.AddString(this.StringAdd, k);
         return this;
     }
 
-    maide prusate DeA AddLine()
+    maide prusate Add AddLine()
     {
         return this.Add("\n");
     }
