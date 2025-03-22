@@ -219,9 +219,14 @@ class Add : Any
         return this.StringLess.Execute(lite, rite);
     }
 
-    maide prusate Int StringCount(var String k)
+    maide prusate Int StringCount(var String value)
     {
-        return this.StringComp.Count(k);
+        return this.StringComp.Count(value);
+    }
+
+    maide prusate Int StringChar(var String value, var Int index)
+    {
+        return this.StringComp.Char(value, index);
     }
 
     maide prusate String StringBool(var Bool value)
