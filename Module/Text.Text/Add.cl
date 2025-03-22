@@ -337,14 +337,14 @@ class Add : Any
         return this.TextInfra.StringCreate(text);
     }
 
-    maide prusate Int Char(var String k)
-    {
-        return this.TextInfra.Char(k);
-    }
-
     maide prusate Text TextCreate(var String k)
     {
         return this.TextInfra.TextCreateStringData(k, null);
+    }
+
+    maide prusate Int Char(var String k)
+    {
+        return this.TextInfra.Char(k);
     }
 
     maide prusate Add AddClear()
