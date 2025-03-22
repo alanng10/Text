@@ -136,8 +136,18 @@ class Add : Any
     field precate TextForm TForm { get { return data; } set { data : value; } }
     field precate Text TextA { get { return data; } set { data : value; } }
     field precate Text TextB { get { return data; } set { data : value; } }
+    field precate Text TextC { get { return data; } set { data : value; } }
+    field precate Text TextD { get { return data; } set { data : value; } }
+    field precate Text TextE { get { return data; } set { data : value; } }
+    field precate Text TextF { get { return data; } set { data : value; } }
     field precate StringData StringDataA { get { return data; } set { data : value; } }
     field precate StringData StringDataB { get { return data; } set { data : value; } }
+    field precate StringData StringDataC { get { return data; } set { data : value; } }
+    field precate StringData StringDataD { get { return data; } set { data : value; } }
+    field precate StringData StringDataE { get { return data; } set { data : value; } }
+    field precate StringData StringDataF { get { return data; } set { data : value; } }
+    field precate Range TRange { get { return data; } set { data : value; } }
+    field precate String Indent { get { return data; } set { data : value; } }
 
     maide prusate Text TA(var String k)
     {
