@@ -359,6 +359,12 @@ class Add : Any
         return this;
     }
 
+    maide prusate Add AddChar(var Int n)
+    {
+        this.StringAdd.Execute(n);
+        return this;
+    }
+
     maide prusate Add AddLine()
     {
         return this.Add(this.TextInfra.NewLine);
