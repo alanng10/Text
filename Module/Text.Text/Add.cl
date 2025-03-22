@@ -18,8 +18,21 @@ class Add : Any
 
         this.TextA : this.CreateText();
         this.TextB : this.CreateText();
+        this.TextC : this.CreateText();
+        this.TextD : this.CreateText();
+        this.TextE : this.CreateText();
+        this.TextF : this.CreateText();
+
         this.StringDataA : this.CreateStringData();
         this.StringDataB : this.CreateStringData();
+        this.StringDataC : this.CreateStringData();
+        this.StringDataD : this.CreateStringData();
+        this.StringDataE : this.CreateStringData();
+        this.StringDataF : this.CreateStringData();
+
+        this.TRange : this.CreateRange();
+
+        this.Indent : this.CreateIndent();
         return true;
     }
 
