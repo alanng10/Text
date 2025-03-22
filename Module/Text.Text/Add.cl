@@ -149,6 +149,26 @@ class Add : Any
         return this.TextString(k, this.TextB, this.StringDataB);
     }
 
+    maide prusate Text TC(var String k)
+    {
+        return this.TextString(k, this.TextC, this.StringDataC);
+    }
+
+    maide prusate Text TD(var String k)
+    {
+        return this.TextString(k, this.TextD, this.StringDataD);
+    }
+
+    maide prusate Text TE(var String k)
+    {
+        return this.TextString(k, this.TextE, this.StringDataE);
+    }
+
+    maide prusate Text TF(var String k)
+    {
+        return this.TextString(k, this.TextF, this.StringDataF);
+    }
+
     maide prusate Text TextString(var String k, var Text text, var StringData data)
     {
         data.ValueString : k;
