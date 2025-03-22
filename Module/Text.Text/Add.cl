@@ -219,6 +219,16 @@ class Add : Any
         return this.TLess.Execute(lite, rite);
     }
 
+    maide prusate Bool TextStart(var Text text, var Text other)
+    {
+        return this.TextInfra.Start(text, other, this.TLess);
+    }
+
+    maide prusate Bool TextEnd(var Text text, var Text other)
+    {
+        return this.TextInfra.End(text, other, this.TLess);
+    }
+
     maide prusate Text TextCreate(var String k)
     {
         return this.TextInfra.TextCreateStringData(k, null);
