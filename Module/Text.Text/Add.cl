@@ -33,6 +33,8 @@ class Add : Any
         this.TRange : this.CreateRange();
 
         this.Indent : this.CreateIndent();
+
+        this.Space : "";
         return true;
     }
 
@@ -161,6 +163,7 @@ class Add : Any
     field precate StringData StringDataF { get { return data; } set { data : value; } }
     field precate Range TRange { get { return data; } set { data : value; } }
     field precate String Indent { get { return data; } set { data : value; } }
+    field precate String Space { get { return data; } set { data : value; } }
 
     maide prusate Text TA(var String k)
     {
@@ -303,6 +306,50 @@ class Add : Any
     maide prusate Text TextPlace(var Text text, var Text limit, var Text join)
     {
         return this.TextInfra.Place(text, limit, join, this.TLess);
+    }
+
+    maide prusate Text TextTrimStart(var Text text)
+    {
+        var Text space;
+        space : this.TE(this.Space);
+
+        var Int start;
+        var Int count;
+        start : text.Range.Index;
+        count : text.Range.Count;
+
+        var Int k;
+        k : 0;
+
+        text.Range.Count : 1;
+
+        var Bool b;
+        b : false;
+
+        var Int i;
+        i : 0;
+        while (~b & i < count)
+        {
+            text.Range.Index : start + i;
+
+            inf (~this.TextSame(text, space))
+            {
+                k : i;
+                b : true;
+            }
+
+            i : i + 1;
+        }
+
+        inf (~b)
+        {
+            k : count;
+        }
+
+        text.Range.Index : start + k;
+        text.Range.Count : count - k;
+
+        return text;
     }
 
     maide prusate Text TextCreate(var String k)
