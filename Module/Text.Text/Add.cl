@@ -179,6 +179,36 @@ class Add : Any
         return text;
     }
 
+    maide prusate Bool ClearText(var Text text)
+    {
+        text.Data : null;
+        return true;
+    }
+
+    maide prusate Bool ClearStringData(var StringData stringData)
+    {
+        stringData.ValueString : null;
+        return true;
+    }
+
+    maide prusate Bool ClearData()
+    {
+        this.ClearText(this.TextA);
+        this.ClearText(this.TextB);
+        this.ClearText(this.TextC);
+        this.ClearText(this.TextD);
+        this.ClearText(this.TextE);
+        this.ClearText(this.TextF);
+
+        this.ClearStringData(this.StringDataA);
+        this.ClearStringData(this.StringDataB);
+        this.ClearStringData(this.StringDataC);
+        this.ClearStringData(this.StringDataD);
+        this.ClearStringData(this.StringDataE);
+        this.ClearStringData(this.StringDataF);
+        return true;
+    }
+
     maide prusate Bool TextSame(var Text text, var Text other)
     {
         return this.TextInfra.Same(text, other, this.TLess);
