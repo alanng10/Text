@@ -353,6 +353,25 @@ class Add : Any
         return this.StringCreateRange(value, index, count);
     }
 
+    maide prusate String StringCreateTextRange(var Text value, var Int index, var Int count)
+    {
+        var Int ka;
+        var Int kb;
+        ka : value.Range.Index;
+        kb : value.Range.Count;
+
+        value.Range.Index : index;
+        value.Range.Count : count;
+
+        var String a;
+        a : this.StringCreate(value);
+
+        value.Range.Index : ka;
+        value.Range.Count : kb;
+
+        return a;
+    }
+
     maide prusate Text TextCreate(var String k)
     {
         return this.TextInfra.TextCreateStringData(k, null);
