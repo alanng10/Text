@@ -119,6 +119,11 @@ class Add : Any
         return a;
     }
 
+    maide precate String CreateIndent()
+    {
+        return this.StringComp.CreateChar(this.TextInfra.Char(" "), 4);
+    }
+
     field precate TextInfra TextInfra { get { return data; } set { data : value; } }
     field precate StringComp StringComp { get { return data; } set { data : value; } }
     field precate Format Format { get { return data; } set { data : value; } }
