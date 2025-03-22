@@ -353,6 +353,18 @@ class Add : Any
         return this.StringAdd.Result();
     }
 
+    maide prusate Add AddIndent(var Int count)
+    {
+        var Int i;
+        i : 0;
+        while (i < count)
+        {
+            this.Add(this.Indent);
+            i : i + 1;
+        }
+        return this;
+    }
+
     maide prusate Add Add(var String k)
     {
         this.TextInfra.AddString(this.StringAdd, k);
