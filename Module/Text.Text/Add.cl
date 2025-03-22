@@ -209,6 +209,11 @@ class Add : Any
         return true;
     }
 
+    maide prusate Int IntText(var Text text, var Int varBase)
+    {
+        return this.IntParse.Execute(text, varBase, null);
+    }
+
     maide prusate Text Place(var Text text, var String limit, var String join)
     {
         return this.TextPlace(text, this.TE(limit), this.TF(join));
