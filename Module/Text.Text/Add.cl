@@ -214,6 +214,16 @@ class Add : Any
         return this.TextInfra.Same(text, other, this.TLess);
     }
 
+    maide prusate Int TextLess(var Text lite, var Text rite)
+    {
+        return this.TLess.Execute(lite, rite);
+    }
+
+    maide prusate Text TextCreate(var String k)
+    {
+        return this.TextInfra.TextCreateStringData(k, null);
+    }
+
     maide prusate Bool StringLess(var String lite, var String rite)
     {
         return this.StringLess.Execute(lite, rite);
@@ -389,11 +399,6 @@ class Add : Any
         value.Range.Count : kb;
 
         return a;
-    }
-
-    maide prusate Text TextCreate(var String k)
-    {
-        return this.TextInfra.TextCreateStringData(k, null);
     }
 
     maide prusate Int Char(var String k)
