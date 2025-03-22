@@ -239,6 +239,29 @@ class Add : Any
         return this.TextInfra.End(text, other, this.TLess);
     }
 
+    maide prusate Text TextForm(var Text text, var TextForm form)
+    {
+        var Int count;
+        count : text.Range.Count;
+
+        var Text a;
+        a : this.TextInfra.TextCreate(count);
+
+        this.TextInfra.Form(a, text, form);
+
+        return a;
+    }
+
+    maide prusate Text TextAlphaNite(var Text text)
+    {
+        return this.TextForm(text, this.TextInfra.AlphaNiteForm);
+    }
+
+    maide prusate Text TextAlphaSite(var Text text)
+    {
+        return this.TextForm(text, this.TextInfra.AlphaSiteForm);
+    }
+
     maide prusate Text TextCreate(var String k)
     {
         return this.TextInfra.TextCreateStringData(k, null);
