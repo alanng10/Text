@@ -111,6 +111,14 @@ class Add : Any
         return a;
     }
 
+    maide precate Range CreateRange()
+    {
+        var Range a;
+        a : new Range;
+        a.Init();
+        return a;
+    }
+
     field precate TextInfra TextInfra { get { return data; } set { data : value; } }
     field precate StringComp StringComp { get { return data; } set { data : value; } }
     field precate Format Format { get { return data; } set { data : value; } }
