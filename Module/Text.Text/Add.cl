@@ -219,6 +219,16 @@ class Add : Any
         return this.TLess.Execute(lite, rite);
     }
 
+    maide prusate Int TextIndex(var Text text, var Text other)
+    {
+        return this.TextInfra.Index(text, other, this.TLess);
+    }
+
+    maide prusate Int TextLastIndex(var Text text, var Text other)
+    {
+        return this.TextInfra.LastIndex(text, other, this.TLess);
+    }
+
     maide prusate Bool TextStart(var Text text, var Text other)
     {
         return this.TextInfra.Start(text, other, this.TLess);
