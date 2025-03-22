@@ -352,6 +352,53 @@ class Add : Any
         return text;
     }
 
+    maide prusate Text TextTrimEnd(var Text text)
+    {
+        var Text space;
+        space : this.TE(this.Space);
+
+        var Int start;
+        var Int count;
+        start : text.Range.Index;
+        count : text.Range.Count;
+
+        var Int k;
+        k : count;
+
+        text.Range.Count : 1;
+
+        var Bool b;
+        b : false;
+
+        var Int i;
+        i : 0;
+        while (~b & i < count)
+        {
+            var Int index;
+            index : (count - 1) - i;
+
+            text.Range.Index : start + index;
+
+            inf (~this.TextSame(text, space))
+            {
+                k : index + 1;
+                b : true;
+            }
+
+            i : i + 1;
+        }
+
+        inf (~b)
+        {
+            k : 0;
+        }
+
+        text.Range.Index : start;
+        text.Range.Count : k;
+
+        return text;
+    }
+
     maide prusate Text TextCreate(var String k)
     {
         return this.TextInfra.TextCreateStringData(k, null);
@@ -523,7 +570,7 @@ class Add : Any
         kb : value.Range.Count;
 
         value.Range.Index : index;
-        value.Range.Count : ka + kb - index;
+        value.Range.Count : (ka + kb) - index;
 
         var String a;
         a : this.StringCreate(value);
