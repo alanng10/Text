@@ -262,6 +262,16 @@ class Add : Any
         return this.TextForm(text, this.TextInfra.AlphaSiteForm);
     }
 
+    maide prusate Array TextLimit(var Text text, var Text limit)
+    {
+        return this.TextInfra.Limit(text, limit, this.TLess);
+    }
+
+    maide prusate Text TextPlace(var Text text, var Text limit, var Text join)
+    {
+        return this.TextInfra.Place(text, limit, join, this.TLess);
+    }
+
     maide prusate Text TextCreate(var String k)
     {
         return this.TextInfra.TextCreateStringData(k, null);
