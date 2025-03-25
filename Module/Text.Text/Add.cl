@@ -12,9 +12,9 @@ class Add : Any
         this.StringAdd : this.CreateStringAdd();
 
         this.CharLess : this.CreateCharLess();
-        this.TForm : this.CreateTextForm();
+        this.TextForm : this.CreateTextForm();
         this.StringLess : this.CreateStringLess();
-        this.TLess : this.CreateTextLess();
+        this.TextLess : this.CreateTextLess();
 
         this.TextA : this.CreateText();
         this.TextB : this.CreateText();
@@ -91,8 +91,8 @@ class Add : Any
         var StringLess a;
         a : new StringLess;
         a.CharLess : this.CharLess;
-        a.LiteForm : this.TForm;
-        a.RiteForm : this.TForm;
+        a.LiteForm : this.TextForm;
+        a.RiteForm : this.TextForm;
         a.Init();
         return a;
     }
@@ -102,8 +102,8 @@ class Add : Any
         var TextLess a;
         a : new TextLess;
         a.CharLess : this.CharLess;
-        a.LiteForm : this.TForm;
-        a.RiteForm : this.TForm;
+        a.LiteForm : this.TextForm;
+        a.RiteForm : this.TextForm;
         a.Init();
         return a;
     }
@@ -146,9 +146,9 @@ class Add : Any
     field precate IntParse IntParse { get { return data; } set { data : value; } }
     field precate StringAdd StringAdd { get { return data; } set { data : value; } }
     field precate StringLess StringLess { get { return data; } set { data : value; } }
-    field precate TextLess TLess { get { return data; } set { data : value; } }
+    field precate TextLess TextLess { get { return data; } set { data : value; } }
     field precate IntLess CharLess { get { return data; } set { data : value; } }
-    field precate TextForm TForm { get { return data; } set { data : value; } }
+    field precate TextForm TextForm { get { return data; } set { data : value; } }
     field precate Text TextA { get { return data; } set { data : value; } }
     field precate Text TextB { get { return data; } set { data : value; } }
     field precate Text TextC { get { return data; } set { data : value; } }
@@ -247,32 +247,32 @@ class Add : Any
 
     maide prusate Bool TextSame(var Text text, var Text other)
     {
-        return this.TextInfra.Same(text, other, this.TLess);
+        return this.TextInfra.Same(text, other, this.TextLess);
     }
 
     maide prusate Int TextLess(var Text lite, var Text rite)
     {
-        return this.TLess.Execute(lite, rite);
+        return this.TextLess.Execute(lite, rite);
     }
 
     maide prusate Int TextIndex(var Text text, var Text other)
     {
-        return this.TextInfra.Index(text, other, this.TLess);
+        return this.TextInfra.Index(text, other, this.TextLess);
     }
 
     maide prusate Int TextLastIndex(var Text text, var Text other)
     {
-        return this.TextInfra.LastIndex(text, other, this.TLess);
+        return this.TextInfra.LastIndex(text, other, this.TextLess);
     }
 
     maide prusate Bool TextStart(var Text text, var Text other)
     {
-        return this.TextInfra.Start(text, other, this.TLess);
+        return this.TextInfra.Start(text, other, this.TextLess);
     }
 
     maide prusate Bool TextEnd(var Text text, var Text other)
     {
-        return this.TextInfra.End(text, other, this.TLess);
+        return this.TextInfra.End(text, other, this.TextLess);
     }
 
     maide prusate Text TextForm(var Text text, var TextForm form)
@@ -300,12 +300,12 @@ class Add : Any
 
     maide prusate Array TextLimit(var Text text, var Text limit)
     {
-        return this.TextInfra.Limit(text, limit, this.TLess);
+        return this.TextInfra.Limit(text, limit, this.TextLess);
     }
 
     maide prusate Text TextPlace(var Text text, var Text limit, var Text join)
     {
-        return this.TextInfra.Place(text, limit, join, this.TLess);
+        return this.TextInfra.Place(text, limit, join, this.TextLess);
     }
 
     maide prusate Text TextTrimStart(var Text text)
