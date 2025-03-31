@@ -9,6 +9,8 @@ System.Infra
     String String
     Range Range
     IntLess IntLess
+System.List
+    Array Array
 System.Text
     Text Text
     TextForm Form
