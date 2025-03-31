@@ -13,7 +13,7 @@ class Add : Any
 
         this.CharLess : this.CreateCharLess();
         this.TForm : this.CreateTextForm();
-        this.StringLess : this.CreateStringLess();
+        this.SLess : this.CreateStringLess();
         this.TLess : this.CreateTextLess();
 
         this.TextA : this.CreateText();
@@ -145,7 +145,7 @@ class Add : Any
     field precate FormatArg FormatArg { get { return data; } set { data : value; } }
     field precate IntParse IntParse { get { return data; } set { data : value; } }
     field precate StringAdd StringAdd { get { return data; } set { data : value; } }
-    field precate StringLess StringLess { get { return data; } set { data : value; } }
+    field precate StringLess SLess { get { return data; } set { data : value; } }
     field precate TextLess TLess { get { return data; } set { data : value; } }
     field precate IntLess CharLess { get { return data; } set { data : value; } }
     field precate TextForm TForm { get { return data; } set { data : value; } }
@@ -406,7 +406,7 @@ class Add : Any
 
     maide prusate Bool StringLess(var String lite, var String rite)
     {
-        return this.StringLess.Execute(lite, rite);
+        return this.SLess.Execute(lite, rite);
     }
 
     maide prusate Int StringCount(var String value)
