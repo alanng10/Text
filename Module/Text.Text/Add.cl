@@ -425,11 +425,11 @@ class Add : Any
 
         inf (value)
         {
-            a : this.TextInfra.TrueString;
+            a : this.TextInfra.BoolTrueString;
         }
         inf (~value)
         {
-            a : this.TextInfra.FalseString;
+            a : this.TextInfra.BoolFalseString;
         }
         return a;
     }
