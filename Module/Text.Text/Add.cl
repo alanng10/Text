@@ -404,7 +404,7 @@ class Add : Any
         return this.TextInfra.TextCreateStringData(k, null);
     }
 
-    maide prusate Bool StringLess(var String lite, var String rite)
+    maide prusate Int StringLess(var String lite, var String rite)
     {
         return this.SLess.Execute(lite, rite);
     }
