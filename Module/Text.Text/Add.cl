@@ -444,13 +444,13 @@ class Add : Any
         return this.StringIntFormat(value, 16, false, 15, 15, this.Char("0"));
     }
 
-    maide prusate String StringBoolFormat(var Bool bool, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
+    maide prusate String StringBoolFormat(var Bool value, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
     {
         var FormatArg arg;
         arg : this.FormatArg;
 
         arg.Kind : 0;
-        arg.Value : bool;
+        arg.Value : value;
         arg.Base : 0;
         arg.AlignLeft : alignLeft;
         arg.FieldWidth : fieldWidth;
@@ -461,13 +461,13 @@ class Add : Any
         return this.StringFormat();
     }
 
-    maide prusate String StringIntFormat(var Int int, var Int varBase, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
+    maide prusate String StringIntFormat(var Int value, var Int varBase, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
     {
         var FormatArg arg;
         arg : this.FormatArg;
 
         arg.Kind : 1;
-        arg.Value : int;
+        arg.Value : value;
         arg.Base : varBase;
         arg.AlignLeft : alignLeft;
         arg.FieldWidth : fieldWidth;
@@ -478,13 +478,13 @@ class Add : Any
         return this.StringFormat();
     }
 
-    maide prusate String StringTextFormat(var Text text, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
+    maide prusate String StringTextFormat(var Text value, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
     {
         var FormatArg arg;
         arg : this.FormatArg;
 
         arg.Kind : 2;
-        arg.Value : text;
+        arg.Value : value;
         arg.Base : 0;
         arg.AlignLeft : alignLeft;
         arg.FieldWidth : fieldWidth;
@@ -617,6 +617,11 @@ class Add : Any
     maide prusate Add AddBool(var Bool value)
     {
         return this.Add(this.StringBool(value));
+    }
+
+    maide prusate Add AddBoolFormat(var Bool value, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
+    {
+        return this.Add(this.StringBoolFormat(value, alignLeft, fieldWidth, maxWidth, fillChar));
     }
 
     maide prusate Add AddInt(var Int value)
