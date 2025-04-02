@@ -410,7 +410,7 @@ class Add : Any
         text : this.TextCreate(value);
 
         var Array a;
-        a : this.TextLimit(text, this.TA(this.TextInfra.NewLine));
+        a : this.TextLimit(text, this.TE(this.TextInfra.NewLine));
         return a;
     }
 
