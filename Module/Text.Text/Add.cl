@@ -404,6 +404,16 @@ class Add : Any
         return this.TextInfra.TextCreateStringData(k, null);
     }
 
+    maide prusate Array TextLine(var String value)
+    {
+        var Text text;
+        text : this.TextCreate(value);
+
+        var Array a;
+        a : this.TextLimit(text, this.TA(this.ClassInfra.NewLine));
+        return a;
+    }
+
     maide prusate Int StringLess(var String lite, var String rite)
     {
         return this.SLess.Execute(lite, rite);
