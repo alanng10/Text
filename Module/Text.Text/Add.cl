@@ -399,9 +399,9 @@ class Add : Any
         return text;
     }
 
-    maide prusate Text TextCreate(var String k)
+    maide prusate Text TextCreate(var String value)
     {
-        return this.TextInfra.TextCreateStringData(k, null);
+        return this.TextInfra.TextCreateStringData(value, null);
     }
 
     maide prusate Array TextLine(var String value)
