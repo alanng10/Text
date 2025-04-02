@@ -609,10 +609,19 @@ class Add : Any
         return this;
     }
 
-    maide prusate Add Add(var String k)
+    maide prusate Add Add(var String value)
     {
-        this.TextInfra.AddString(this.StringAdd, k);
+        this.TextInfra.AddString(this.StringAdd, value);
         return this;
+    }
+    maide prusate Add AddBool(var Bool value)
+    {
+        return this.Add(this.StringBool(value));
+    }
+
+    maide prusate Add AddInt(var Int value)
+    {
+        return this.Add(this.StringInt(value));
     }
 
     maide prusate Add AddChar(var Int n)
