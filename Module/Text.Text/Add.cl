@@ -634,6 +634,11 @@ class Add : Any
         return this.Add(this.StringIntFormat(value, varBase, alignLeft, fieldWidth, maxWidth, fillChar));
     }
 
+    maide prusate Add AddText(var Text value)
+    {
+        return this.Add(this.StringCreate(value));
+    }
+
     maide prusate Add AddChar(var Int n)
     {
         this.StringAdd.Execute(n);
