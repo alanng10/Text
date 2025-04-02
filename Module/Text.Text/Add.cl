@@ -624,14 +624,14 @@ class Add : Any
         return this.Add(this.StringBoolFormat(value, alignLeft, fieldWidth, maxWidth, fillChar));
     }
 
-    maide prusate Add AddIntFormat(var Int value, var Int varBase, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
-    {
-        return this.Add(this.StringIntFormat(value, varBase, alignLeft, fieldWidth, maxWidth, fillChar));
-    }
-
     maide prusate Add AddInt(var Int value)
     {
         return this.Add(this.StringInt(value));
+    }
+
+    maide prusate Add AddIntFormat(var Int value, var Int varBase, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
+    {
+        return this.Add(this.StringIntFormat(value, varBase, alignLeft, fieldWidth, maxWidth, fillChar));
     }
 
     maide prusate Add AddChar(var Int n)
