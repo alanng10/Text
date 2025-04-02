@@ -34,7 +34,7 @@ class Add : Any
 
         this.Indent : this.CreateIndent();
 
-        this.Space : "";
+        this.Space : " ";
         return true;
     }
 
