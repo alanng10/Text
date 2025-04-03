@@ -240,11 +240,6 @@ class Add : Any
         return this.IntParse.Execute(text, varBase, null);
     }
 
-    maide prusate Text Place(var Text text, var String limit, var String join)
-    {
-        return this.TextPlace(text, this.TE(limit), this.TF(join));
-    }
-
     maide prusate Bool TextSame(var Text text, var Text other)
     {
         return this.TextInfra.Same(text, other, this.TLess);
