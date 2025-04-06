@@ -32,9 +32,9 @@ class Add : Any
 
         this.RangeA : this.CreateRange();
 
-        this.Indent : this.CreateIndent();
+        this.SIndent : this.CreateIndent();
 
-        this.Space : " ";
+        this.SSpace : " ";
         return true;
     }
 
@@ -162,8 +162,8 @@ class Add : Any
     field precate StringData StringDataE { get { return data; } set { data : value; } }
     field precate StringData StringDataF { get { return data; } set { data : value; } }
     field precate Range RangeA { get { return data; } set { data : value; } }
-    field precate String Indent { get { return data; } set { data : value; } }
-    field precate String Space { get { return data; } set { data : value; } }
+    field precate String SIndent { get { return data; } set { data : value; } }
+    field precate String SSpace { get { return data; } set { data : value; } }
 
     maide prusate Text TA(var String k)
     {
@@ -306,7 +306,7 @@ class Add : Any
     maide prusate Text TextTrimStart(var Text text)
     {
         var Text space;
-        space : this.TE(this.Space);
+        space : this.TE(this.SSpace);
 
         var Int start;
         var Int count;
@@ -350,7 +350,7 @@ class Add : Any
     maide prusate Text TextTrimEnd(var Text text)
     {
         var Text space;
-        space : this.TE(this.Space);
+        space : this.TE(this.SSpace);
 
         var Int start;
         var Int count;
@@ -608,7 +608,7 @@ class Add : Any
         i : 0;
         while (i < count)
         {
-            this.Add(this.Indent);
+            this.Add(this.SIndent);
             i : i + 1;
         }
         return this;
