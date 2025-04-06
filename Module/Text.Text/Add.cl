@@ -11,7 +11,7 @@ class Add : Any
         this.IntParse : this.CreateIntParse();
         this.StringAdd : this.CreateStringAdd();
 
-        this.CharLess : this.CreateCharLess();
+        this.ILess : this.CreateCharLess();
         this.TForm : this.CreateTextForm();
         this.SLess : this.CreateStringLess();
         this.TLess : this.CreateTextLess();
@@ -90,7 +90,7 @@ class Add : Any
     {
         var StringLess a;
         a : new StringLess;
-        a.CharLess : this.CharLess;
+        a.CharLess : this.ILess;
         a.LiteForm : this.TForm;
         a.RiteForm : this.TForm;
         a.Init();
@@ -101,7 +101,7 @@ class Add : Any
     {
         var TextLess a;
         a : new TextLess;
-        a.CharLess : this.CharLess;
+        a.CharLess : this.ILess;
         a.LiteForm : this.TForm;
         a.RiteForm : this.TForm;
         a.Init();
@@ -147,7 +147,7 @@ class Add : Any
     field precate StringAdd StringAdd { get { return data; } set { data : value; } }
     field precate StringLess SLess { get { return data; } set { data : value; } }
     field precate TextLess TLess { get { return data; } set { data : value; } }
-    field precate IntLess CharLess { get { return data; } set { data : value; } }
+    field precate IntLess ILess { get { return data; } set { data : value; } }
     field precate TextForm TForm { get { return data; } set { data : value; } }
     field precate Text TextA { get { return data; } set { data : value; } }
     field precate Text TextB { get { return data; } set { data : value; } }
