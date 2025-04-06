@@ -32,9 +32,8 @@ class Add : Any
 
         this.TRangeA : this.CreateRange();
 
-        this.SIndent : this.CreateIndent();
-
         this.SSpace : " ";
+        this.SIndent : this.CreateIndent();
         return true;
     }
 
@@ -136,7 +135,7 @@ class Add : Any
 
     maide precate String CreateIndent()
     {
-        return this.StringComp.CreateChar(this.TextInfra.Char(" "), 4);
+        return this.StringComp.CreateChar(this.Char(this.SSpace), 4);
     }
 
     field precate TextInfra TextInfra { get { return data; } set { data : value; } }
