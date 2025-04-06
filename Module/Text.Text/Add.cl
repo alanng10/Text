@@ -30,7 +30,7 @@ class Add : Any
         this.StringDataE : this.CreateStringData();
         this.StringDataF : this.CreateStringData();
 
-        this.RangeA : this.CreateRange();
+        this.TRangeA : this.CreateRange();
 
         this.SIndent : this.CreateIndent();
 
@@ -161,7 +161,7 @@ class Add : Any
     field precate StringData StringDataD { get { return data; } set { data : value; } }
     field precate StringData StringDataE { get { return data; } set { data : value; } }
     field precate StringData StringDataF { get { return data; } set { data : value; } }
-    field precate Range RangeA { get { return data; } set { data : value; } }
+    field precate Range TRangeA { get { return data; } set { data : value; } }
     field precate String SIndent { get { return data; } set { data : value; } }
     field precate String SSpace { get { return data; } set { data : value; } }
 
@@ -534,10 +534,10 @@ class Add : Any
 
     maide prusate String StringCreateRange(var String value, var Int index, var Int count)
     {
-        this.RangeA.Index : index;
-        this.RangeA.Count : count;
+        this.TRangeA.Index : index;
+        this.TRangeA.Count : count;
 
-        return this.StringComp.CreateString(value, this.RangeA);
+        return this.StringComp.CreateString(value, this.TRangeA);
     }
 
     maide prusate String StringCreateIndex(var String value, var Int index)
