@@ -13,8 +13,8 @@ class Add : Any
 
         this.ILess : this.CreateIntLess();
         this.TForm : this.CreateTextForm();
-        this.SLess : this.CreateStringLess();
         this.TLess : this.CreateTextLess();
+        this.SLess : this.CreateStringLess();
 
         this.TextA : this.CreateText();
         this.TextB : this.CreateText();
@@ -145,8 +145,8 @@ class Add : Any
     field precate FormatArg FormatArg { get { return data; } set { data : value; } }
     field precate IntParse IntParse { get { return data; } set { data : value; } }
     field precate StringAdd StringAdd { get { return data; } set { data : value; } }
-    field precate StringLess SLess { get { return data; } set { data : value; } }
     field precate TextLess TLess { get { return data; } set { data : value; } }
+    field precate StringLess SLess { get { return data; } set { data : value; } }
     field precate IntLess ILess { get { return data; } set { data : value; } }
     field precate TextForm TForm { get { return data; } set { data : value; } }
     field precate Text TextA { get { return data; } set { data : value; } }
