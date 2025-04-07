@@ -410,11 +410,8 @@ class Add : Any
         return this.TextInfra.TextCreateStringData(value, null);
     }
 
-    maide prusate Array TextLine(var String value)
+    maide prusate Array TextLine(var Text text)
     {
-        var Text text;
-        text : this.TextCreate(value);
-
         var Array a;
         a : this.TextLimit(text, this.TE(this.TextInfra.NewLine));
         return a;
