@@ -234,6 +234,18 @@ class Add : Any
         return true;
     }
 
+    maide prusate Bool BoolText(var Text text)
+    {
+        var Bool k;
+        k : false;
+
+        inf (this.TextSame(text, this.TE(this.TextInfra.BoolTrueString)))
+        {
+            k : true;
+        }
+        return k;
+    }
+
     maide prusate Int IntText(var Text text, var Int varBase)
     {
         return this.IntParse.Execute(text, varBase, null);
