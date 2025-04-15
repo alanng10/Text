@@ -599,13 +599,13 @@ class Add : Any
         return this.TextInfra.Char(k);
     }
 
-    maide prusate Add Clear()
+    maide prusate Add AddClear()
     {
         this.StringAdd.Clear();
         return this;
     }
 
-    maide prusate String Result()
+    maide prusate String AddResult()
     {
         return this.StringAdd.Result();
     }
