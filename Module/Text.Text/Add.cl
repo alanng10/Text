@@ -615,9 +615,9 @@ class Add : Any
         return this;
     }
 
-    maide prusate Add AddChar(var Int n)
+    maide prusate Add AddChar(var Int value)
     {
-        this.StringAdd.Execute(n);
+        this.StringAdd.Execute(value);
         return this;
     }
 
