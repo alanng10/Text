@@ -275,14 +275,14 @@ class Add : Any
         return this.TextInfra.End(text, other, this.TLess);
     }
 
-    maide prusate Bool TextSame(var Text text, var Text other)
-    {
-        return this.TextInfra.Same(text, other, this.TLess);
-    }
-
     maide prusate Int TextLess(var Text lite, var Text rite)
     {
         return this.TLess.Execute(lite, rite);
+    }
+
+    maide prusate Bool TextSame(var Text text, var Text other)
+    {
+        return this.TextInfra.Same(text, other, this.TLess);
     }
 
     maide prusate Text TextForm(var Text text, var TextForm form)
