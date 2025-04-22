@@ -143,10 +143,10 @@ class Add : Any
     field precate FormatArg FormatArg { get { return data; } set { data : value; } }
     field precate IntParse IntParse { get { return data; } set { data : value; } }
     field precate StringAdd StringAdd { get { return data; } set { data : value; } }
+    field precate TextForm TForm { get { return data; } set { data : value; } }
     field precate TextLess TLess { get { return data; } set { data : value; } }
     field precate StringLess SLess { get { return data; } set { data : value; } }
     field precate IntLess ILess { get { return data; } set { data : value; } }
-    field precate TextForm TForm { get { return data; } set { data : value; } }
     field precate Text TextA { get { return data; } set { data : value; } }
     field precate Text TextB { get { return data; } set { data : value; } }
     field precate Text TextC { get { return data; } set { data : value; } }
@@ -250,14 +250,9 @@ class Add : Any
         return this.IntParse.Execute(text, varBase, null);
     }
 
-    maide prusate Bool TextSame(var Text text, var Text other)
+    maide prusate Text TextCreate(var String value)
     {
-        return this.TextInfra.Same(text, other, this.TLess);
-    }
-
-    maide prusate Int TextLess(var Text lite, var Text rite)
-    {
-        return this.TLess.Execute(lite, rite);
+        return this.TextInfra.TextCreateStringData(value, null);
     }
 
     maide prusate Int TextIndex(var Text text, var Text other)
@@ -278,6 +273,16 @@ class Add : Any
     maide prusate Bool TextEnd(var Text text, var Text other)
     {
         return this.TextInfra.End(text, other, this.TLess);
+    }
+
+    maide prusate Bool TextSame(var Text text, var Text other)
+    {
+        return this.TextInfra.Same(text, other, this.TLess);
+    }
+
+    maide prusate Int TextLess(var Text lite, var Text rite)
+    {
+        return this.TLess.Execute(lite, rite);
     }
 
     maide prusate Text TextForm(var Text text, var TextForm form)
@@ -311,6 +316,13 @@ class Add : Any
     maide prusate Text TextPlace(var Text text, var Text limit, var Text join)
     {
         return this.TextInfra.Place(text, limit, join, this.TLess);
+    }
+
+    maide prusate Array TextLine(var Text text)
+    {
+        var Array a;
+        a : this.TextLimit(text, this.TE(this.TextInfra.NewLine));
+        return a;
     }
 
     maide prusate Text TextTrimStart(var Text text)
@@ -402,18 +414,6 @@ class Add : Any
         text.Range.Count : k;
 
         return text;
-    }
-
-    maide prusate Text TextCreate(var String value)
-    {
-        return this.TextInfra.TextCreateStringData(value, null);
-    }
-
-    maide prusate Array TextLine(var Text text)
-    {
-        var Array a;
-        a : this.TextLimit(text, this.TE(this.TextInfra.NewLine));
-        return a;
     }
 
     maide prusate Int StringLess(var String lite, var String rite)
