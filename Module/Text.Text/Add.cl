@@ -10,11 +10,10 @@ class Add : Any
         this.FormatArg : this.CreateFormatArg();
         this.IntParse : this.CreateIntParse();
         this.StringAdd : this.CreateStringAdd();
-
-        this.ILess : this.CreateIntLess();
         this.TForm : this.CreateTextForm();
         this.TLess : this.CreateTextLess();
         this.SLess : this.CreateStringLess();
+        this.ILess : this.CreateIntLess();
 
         this.TextA : this.CreateText();
         this.TextB : this.CreateText();
@@ -69,18 +68,21 @@ class Add : Any
         return a;
     }
 
-    maide precate IntLess CreateIntLess()
-    {
-        var IntLess a;
-        a : new IntLess;
-        a.Init();
-        return a;
-    }
-
     maide precate TextForm CreateTextForm()
     {
         var TextForm a;
         a : new TextForm;
+        a.Init();
+        return a;
+    }
+
+    maide precate TextLess CreateTextLess()
+    {
+        var TextLess a;
+        a : new TextLess;
+        a.CharLess : this.ILess;
+        a.LiteForm : this.TForm;
+        a.RiteForm : this.TForm;
         a.Init();
         return a;
     }
@@ -96,13 +98,10 @@ class Add : Any
         return a;
     }
 
-    maide precate TextLess CreateTextLess()
+    maide precate IntLess CreateIntLess()
     {
-        var TextLess a;
-        a : new TextLess;
-        a.CharLess : this.ILess;
-        a.LiteForm : this.TForm;
-        a.RiteForm : this.TForm;
+        var IntLess a;
+        a : new IntLess;
         a.Init();
         return a;
     }
@@ -640,6 +639,11 @@ class Add : Any
     maide prusate Add AddInt(var Int value)
     {
         return this.Add(this.StringInt(value));
+    }
+
+    maide prusate Add AddIntHex(var Int value)
+    {
+        return this.Add(this.StringIntHex(value));
     }
 
     maide prusate Add AddIntFormat(var Int value, var Int varBase, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
