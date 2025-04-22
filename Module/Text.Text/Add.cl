@@ -80,9 +80,9 @@ class Add : Any
     {
         var TextLess a;
         a : new TextLess;
-        a.CharLess : this.ILess;
         a.LiteForm : this.TForm;
         a.RiteForm : this.TForm;
+        a.CharLess : this.ILess;
         a.Init();
         return a;
     }
@@ -91,9 +91,9 @@ class Add : Any
     {
         var StringLess a;
         a : new StringLess;
-        a.CharLess : this.ILess;
         a.LiteForm : this.TForm;
         a.RiteForm : this.TForm;
+        a.CharLess : this.ILess;
         a.Init();
         return a;
     }
