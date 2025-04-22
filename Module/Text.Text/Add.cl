@@ -416,9 +416,63 @@ class Add : Any
         return text;
     }
 
-    maide prusate Int StringLess(var String lite, var String rite)
+    maide prusate String StringCreate(var Text text)
     {
-        return this.SLess.Execute(lite, rite);
+        return this.TextInfra.StringCreate(text);
+    }
+
+    maide prusate String StringCreateRange(var String value, var Int index, var Int count)
+    {
+        this.TRangeA.Index : index;
+        this.TRangeA.Count : count;
+
+        return this.StringComp.CreateString(value, this.TRangeA);
+    }
+
+    maide prusate String StringCreateIndex(var String value, var Int index)
+    {
+        var Int count;
+        count : this.StringCount(value) - index;
+
+        return this.StringCreateRange(value, index, count);
+    }
+
+    maide prusate String StringCreateTextRange(var Text value, var Int index, var Int count)
+    {
+        var Int ka;
+        var Int kb;
+        ka : value.Range.Index;
+        kb : value.Range.Count;
+
+        value.Range.Index : index;
+        value.Range.Count : count;
+
+        var String a;
+        a : this.StringCreate(value);
+
+        value.Range.Index : ka;
+        value.Range.Count : kb;
+
+        return a;
+    }
+
+    maide prusate String StringCreateTextIndex(var Text value, var Int index)
+    {
+        var Int ka;
+        var Int kb;
+        ka : value.Range.Index;
+        kb : value.Range.Count;
+
+        value.Range.Index : index;
+        value.Range.Count : (ka + kb) - index;
+
+        var String a;
+        a : this.StringCreate(value);
+
+        value.Range.Index : ka;
+        value.Range.Count : kb;
+
+        return a;
     }
 
     maide prusate Int StringCount(var String value)
@@ -429,6 +483,11 @@ class Add : Any
     maide prusate Int StringChar(var String value, var Int index)
     {
         return this.StringComp.Char(value, index);
+    }
+
+    maide prusate Int StringLess(var String lite, var String rite)
+    {
+        return this.SLess.Execute(lite, rite);
     }
 
     maide prusate String StringBool(var Bool value)
@@ -446,16 +505,6 @@ class Add : Any
         return a;
     }
 
-    maide prusate String StringInt(var Int value)
-    {
-        return this.StringIntFormat(value, 10, false, 0, null, 0);
-    }
-
-    maide prusate String StringIntHex(var Int value)
-    {
-        return this.StringIntFormat(value, 16, false, 15, 15, this.Char("0"));
-    }
-
     maide prusate String StringBoolFormat(var Bool value, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
     {
         var FormatArg arg;
@@ -471,6 +520,16 @@ class Add : Any
         arg.Form : null;
 
         return this.StringFormat();
+    }
+
+    maide prusate String StringInt(var Int value)
+    {
+        return this.StringIntFormat(value, 10, false, 0, null, 0);
+    }
+
+    maide prusate String StringIntHex(var Int value)
+    {
+        return this.StringIntFormat(value, 16, false, 15, 15, this.Char("0"));
     }
 
     maide prusate String StringIntFormat(var Int value, var Int varBase, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
@@ -534,65 +593,6 @@ class Add : Any
         return a;
     }
 
-    maide prusate String StringCreate(var Text text)
-    {
-        return this.TextInfra.StringCreate(text);
-    }
-
-    maide prusate String StringCreateRange(var String value, var Int index, var Int count)
-    {
-        this.TRangeA.Index : index;
-        this.TRangeA.Count : count;
-
-        return this.StringComp.CreateString(value, this.TRangeA);
-    }
-
-    maide prusate String StringCreateIndex(var String value, var Int index)
-    {
-        var Int count;
-        count : this.StringCount(value) - index;
-
-        return this.StringCreateRange(value, index, count);
-    }
-
-    maide prusate String StringCreateTextRange(var Text value, var Int index, var Int count)
-    {
-        var Int ka;
-        var Int kb;
-        ka : value.Range.Index;
-        kb : value.Range.Count;
-
-        value.Range.Index : index;
-        value.Range.Count : count;
-
-        var String a;
-        a : this.StringCreate(value);
-
-        value.Range.Index : ka;
-        value.Range.Count : kb;
-
-        return a;
-    }
-
-    maide prusate String StringCreateTextIndex(var Text value, var Int index)
-    {
-        var Int ka;
-        var Int kb;
-        ka : value.Range.Index;
-        kb : value.Range.Count;
-
-        value.Range.Index : index;
-        value.Range.Count : (ka + kb) - index;
-
-        var String a;
-        a : this.StringCreate(value);
-
-        value.Range.Index : ka;
-        value.Range.Count : kb;
-
-        return a;
-    }
-
     maide prusate Int Char(var String k)
     {
         return this.TextInfra.Char(k);
@@ -609,6 +609,23 @@ class Add : Any
         return this.StringAdd.Result();
     }
 
+    maide prusate Add Add(var String value)
+    {
+        this.TextInfra.AddString(this.StringAdd, value);
+        return this;
+    }
+
+    maide prusate Add AddChar(var Int n)
+    {
+        this.StringAdd.Execute(n);
+        return this;
+    }
+
+    maide prusate Add AddLine()
+    {
+        return this.Add(this.TextInfra.NewLine);
+    }
+
     maide prusate Add AddIndent(var Int count)
     {
         var Int i;
@@ -621,11 +638,6 @@ class Add : Any
         return this;
     }
 
-    maide prusate Add Add(var String value)
-    {
-        this.TextInfra.AddString(this.StringAdd, value);
-        return this;
-    }
     maide prusate Add AddBool(var Bool value)
     {
         return this.Add(this.StringBool(value));
@@ -659,16 +671,5 @@ class Add : Any
     maide prusate Add AddTextFormat(var Text value, var Bool alignLeft, var Int fieldWidth, var Int maxWidth, var Int fillChar)
     {
         return this.Add(this.StringTextFormat(value, alignLeft, fieldWidth, maxWidth, fillChar));
-    }
-
-    maide prusate Add AddChar(var Int n)
-    {
-        this.StringAdd.Execute(n);
-        return this;
-    }
-
-    maide prusate Add AddLine()
-    {
-        return this.Add(this.TextInfra.NewLine);
     }
 }
