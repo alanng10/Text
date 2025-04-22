@@ -593,9 +593,9 @@ class Add : Any
         return a;
     }
 
-    maide prusate Int Char(var String k)
+    maide prusate Int Char(var String value)
     {
-        return this.TextInfra.Char(k);
+        return this.TextInfra.Char(value);
     }
 
     maide prusate Add AddClear()
