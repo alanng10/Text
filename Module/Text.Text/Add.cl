@@ -255,19 +255,6 @@ class Add : Any
         return this.TextInfra.TextCreateStringData(value, null);
     }
 
-    maide prusate Text TextCreateDataRange(var Data data, var Int index, var Int count)
-    {
-        var Text a;
-        a : new Text;
-        a.Init();
-        a.Data : data;
-        a.Range : new Range;
-        a.Range.Init();
-        a.Range.Index : index;
-        a.Range.Count : count;
-        return a;
-    }
-
     maide prusate Int TextIndex(var Text text, var Text other)
     {
         return this.TextInfra.Index(text, other, this.TLess);
