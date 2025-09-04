@@ -163,43 +163,43 @@ class Add : Any
     field precate String SIndent { get { return data; } set { data : value; } }
     field precate String SSpace { get { return data; } set { data : value; } }
 
-    maide prusate Text TA(var String k)
+    maide prusate Text TA(var String value)
     {
-        return this.TextString(k, this.TextA, this.StringDataA);
+        return this.TextString(value, this.TextA, this.StringDataA);
     }
 
-    maide prusate Text TB(var String k)
+    maide prusate Text TB(var String value)
     {
-        return this.TextString(k, this.TextB, this.StringDataB);
+        return this.TextString(value, this.TextB, this.StringDataB);
     }
 
-    maide prusate Text TC(var String k)
+    maide prusate Text TC(var String value)
     {
-        return this.TextString(k, this.TextC, this.StringDataC);
+        return this.TextString(value, this.TextC, this.StringDataC);
     }
 
-    maide prusate Text TD(var String k)
+    maide prusate Text TD(var String value)
     {
-        return this.TextString(k, this.TextD, this.StringDataD);
+        return this.TextString(value, this.TextD, this.StringDataD);
     }
 
-    maide prusate Text TE(var String k)
+    maide prusate Text TE(var String value)
     {
-        return this.TextString(k, this.TextE, this.StringDataE);
+        return this.TextString(value, this.TextE, this.StringDataE);
     }
 
-    maide prusate Text TF(var String k)
+    maide prusate Text TF(var String value)
     {
-        return this.TextString(k, this.TextF, this.StringDataF);
+        return this.TextString(value, this.TextF, this.StringDataF);
     }
 
-    maide prusate Text TextString(var String k, var Text text, var StringData data)
+    maide prusate Text TextString(var String value, var Text text, var StringData data)
     {
-        data.ValueString : k;
+        data.ValueString : value;
 
         text.Data : data;
         text.Range.Index : 0;
-        text.Range.Count : this.StringCount(k);
+        text.Range.Count : this.StringCount(value);
         return text;
     }
 
