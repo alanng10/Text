@@ -1,3 +1,3 @@
 @echo off
 
-call ..\Script\Module\MakeLibrary Text.Text
+call ..\Script\Module\Library Text.Text
