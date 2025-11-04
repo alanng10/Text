@@ -1,3 +1,3 @@
 @echo off
 
-call ..\Script\Module\Make Text Text.Text
+call ..\Script\Module\MakeSaber Text Text.Text
